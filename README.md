@@ -1,5 +1,6 @@
 # To do list
-An easy to do list app created with C#  
+An easy to do list app created with C#.  
+The installer is created using [Install Creator](https://www.clickteam.com/install-creator-2)
 
 ## How to download the app
 Click [here](https://github.com/LucaYan0506/To-do-list/releases/download/v1.0.0/Installer.exe) to download the app (for windows). 
