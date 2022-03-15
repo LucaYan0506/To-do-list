@@ -27,3 +27,20 @@ After the installation, a copy of it will be on desktop
 ![image](https://user-images.githubusercontent.com/83918638/158447926-90559068-f3d0-43f9-8bae-4f7a283d9170.png)  
 
 ## How to use it 
+After you intalled and opened the app, it should looks like this 
+![image](https://user-images.githubusercontent.com/83918638/158448457-9ffc1d95-9838-4650-836c-afd27de1c9c6.png)     
+Move the mouse to the left edge of the app and it should comes out a menu.  
+If it doesn't work click the button on top-left of the app ![image](https://user-images.githubusercontent.com/83918638/158448790-e101ea9f-362e-4f4a-94b5-eb94c74498ca.png)  
+![image](https://user-images.githubusercontent.com/83918638/158449290-fec8df47-1609-4013-941c-079bcf8b1dd1.png)
+Here we can create a new section of delete it (we can't delete the section right now because we have only 1 section, and the program needs at least 1 section)   
+To write a note we just need to click on one of these cells. The cell should become red. After you finished to write your note, click **enter** or click another cell with the mouse.   
+![image](https://user-images.githubusercontent.com/83918638/158449610-6b7d1939-3615-4ea0-ad76-c1eb5cf7a1d4.png)  
+If we want edit some note that we write previouly, double click that cell. (it should become red again).   
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/83918638/158455994-625def10-ad50-4bcd-8154-96801044661e.gif)   
+If you want to move that note (for example from "Haven't start yet" to "in progress"), left click the cell (hold it) and move it to another cell.    
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/83918638/158455162-8aeee39c-a5fd-4735-a785-4ea6c7e04f31.gif)  
+If you want to remove a note move the cell down. It will pop up a message box and ask you if you are sure to delete it.  
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/83918638/158456381-700a77b1-9093-42b3-8b16-4e714c7928b5.gif)  
+You can also add some detail for a note (such as add an image, link or text.  
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/83918638/158456959-0e8286a7-df01-49f6-a948-1ef223014c9a.gif)  
+
