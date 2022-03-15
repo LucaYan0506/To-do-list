@@ -41,6 +41,6 @@ If you want to move that note (for example from "Haven't start yet" to "in progr
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/83918638/158455162-8aeee39c-a5fd-4735-a785-4ea6c7e04f31.gif)  
 If you want to remove a note move the cell down. It will pop up a message box and ask you if you are sure to delete it.  
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/83918638/158456381-700a77b1-9093-42b3-8b16-4e714c7928b5.gif)  
-You can also add some detail for a note (such as add an image, link or text.  
+You can also add some detail for a note (such as add an image, link or text.("Order by" doens't work for now")    
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/83918638/158456959-0e8286a7-df01-49f6-a948-1ef223014c9a.gif)  
 
