@@ -1,0 +1,12 @@
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\bin\Debug\To do list (1.1).exe.config
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\bin\Debug\To do list (1.1).exe
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\bin\Debug\To do list (1.1).pdb
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To do list (1.1).csproj.AssemblyReference.cache
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To_do_list__1._1_.Properties.Resources.resources
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To do list (1.1).csproj.GenerateResource.cache
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To do list (1.1).csproj.CoreCompileInputs.cache
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To do list (1.1).exe
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To do list (1.1).pdb
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To_do_list__1._1_.Detail_Form.resources
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To_do_list__1._1_.Form1.resources
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To_do_list__1._1_.Delete_form.resources
