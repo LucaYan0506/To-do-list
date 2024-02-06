@@ -542,7 +542,7 @@ namespace To_do_list__1._1_
         Panel CustomizePanel;
 
         //save the background of the current panel
-        PictureBox GridBackground;
+        PictureBox GridBackground = new PictureBox();
         //this variable help to make sure that resize menuslide only when it needs.  
         bool scrollBarVisible = false;                  
         //this variable help to make sure that resize panels only when it needs.   
@@ -567,7 +567,7 @@ namespace To_do_list__1._1_
         Control PreviousButton,PreviousIcon1, PreviousIcon2;
 
         //save the position of each cell in the panel
-        Point[,] GridCell;
+        Point[,] GridCell = new Point[0,0];
 
         //when the user scroll with the mouse this variable will save that value 
         //used to make sure that the value of each scroll (delta) will change to 47 instead of 120
@@ -800,6 +800,8 @@ namespace To_do_list__1._1_
                 }
             }
 
+            //update gridcell
+
 
             //ask the user if he wants to save changes made in the previous section 
             //ask only when the user made some changes
@@ -810,6 +812,9 @@ namespace To_do_list__1._1_
 
                 if (result == DialogResult.Yes)
                 {
+                    //set scroll value to 0
+                    CustomizePanel.AutoScrollPosition = new Point(0, 0);
+
                     //save 
                     StreamWriter file = new StreamWriter(CustomizePanel.Name);
                     foreach (Control ctrl in CustomizePanel.Controls)
@@ -885,7 +890,6 @@ namespace To_do_list__1._1_
                         }
 
                         file.Dispose();
-
                     }
                 }
             }
@@ -990,6 +994,18 @@ namespace To_do_list__1._1_
                             if (pic is PictureBox)
                             {
                                 GridBackground = (pic as PictureBox);
+                                foreach (Control ctrl2 in CustomizePanel.Controls)
+                                {
+                                    GridBackground.Size = new Size(GridBackground.Width, Math.Max(GridBackground.Height, ctrl2.Location.Y + 45 + CustomizePanel.VerticalScroll.Value));
+                                }
+                                GridCell = Preserve_resize_2Dpoint(GridCell, new Size(GridBackground.Height / 47, 3));
+                                for (int x = 0; x < GridCell.GetLength(0); x++)
+                                {
+                                    GridCell[x, 0] = new Point(0, x * 47);
+                                    GridCell[x, 1] = new Point(267, x * 47);
+                                    GridCell[x, 2] = new Point(534, x * 47);
+                                }
+
                             }
                         }
                        
@@ -1194,8 +1210,6 @@ namespace To_do_list__1._1_
                     Background.Location = new Point(0, 0);
                     Background.Click += GridBackground_Click;
                     Background.MouseMove += Form1_MouseMove;
-                    Background.Resize += GridBackground_Resize;
-                    NewPanel.Controls.Add(Background);
 
                     //add new panel
                     NewPanel.Visible = false;
@@ -1269,13 +1283,21 @@ namespace To_do_list__1._1_
 
                         file2.Dispose();
 
+                        foreach (Control ctrl in NewPanel.Controls)
+                        {
+                            Background.Size = new Size(Background.Width, Math.Max(Background.Height, ctrl.Location.Y + 45 + NewPanel.VerticalScroll.Value));
+                        }
+
+                        Background.Resize +=    GridBackground_Resize;
+                        NewPanel.Controls.Add(Background);
+
                     }
 
                     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     //select the first section in the list
-              if  (Section.Location.Y == 0)
+                    if  (Section.Location.Y == 0)
                     {
                         CustomizePanel = NewPanel;
                         Section.Checked = true;
@@ -1284,6 +1306,13 @@ namespace To_do_list__1._1_
                             if (pic is PictureBox)
                             {
                                 GridBackground = (pic as PictureBox);
+                                GridCell = Preserve_resize_2Dpoint(GridCell, new Size(GridBackground.Height / 47,3));
+                                for (int x = 0; x < GridCell.GetLength(0); x++)
+                                {
+                                    GridCell[x, 0] = new Point(0, x * 47);
+                                    GridCell[x, 1] = new Point(267, x * 47);
+                                    GridCell[x, 2] = new Point(534, x * 47);
+                                }
                             }
                         }
                     }
@@ -1716,7 +1745,12 @@ namespace To_do_list__1._1_
                     if (GridBackground.Height - 36 <= txt.Location.Y + 45)
                     {
                         GridBackground.Size = new Size(GridBackground.Width, GridBackground.Height + 47);
-                    }
+                        foreach (Control ctrl in CustomizePanel.Controls)
+                        {
+                            GridBackground.Size = new Size(GridBackground.Width, Math.Max(GridBackground.Height, ctrl.Location.Y + 45 + CustomizePanel.VerticalScroll.Value));
+
+                        }
+                }
 
                     //set back the scoll to the origin position of the bar 
                     CustomizePanel.VerticalScroll.Value = ScrollBarValue;
@@ -1850,6 +1884,11 @@ namespace To_do_list__1._1_
                 if (GridBackground.Height - 36 <= (sender as TextBox).Location.Y + 45)
                 {
                     GridBackground.Size = new Size(GridBackground.Width, GridBackground.Height + 47);
+                    foreach (Control ctrl in CustomizePanel.Controls)
+                    {
+                        GridBackground.Size = new Size(GridBackground.Width, Math.Max(GridBackground.Height, ctrl.Location.Y + 45 + CustomizePanel.VerticalScroll.Value));
+
+                    }
                 }
 
                 //set back the scoll to the origin position of the bar 
@@ -2000,6 +2039,11 @@ namespace To_do_list__1._1_
                 if (GridBackground.Height - 36 <= txt.Location.Y + 45)
                 {
                     GridBackground.Size = new Size(GridBackground.Width, GridBackground.Height + 47);
+                    foreach (Control ctrl in CustomizePanel.Controls)
+                    {
+                        GridBackground.Size = new Size(GridBackground.Width, Math.Max(GridBackground.Height, ctrl.Location.Y + 45 + CustomizePanel.VerticalScroll.Value));
+
+                    }
                 }
 
                 //set back the scoll to the origin position of the bar 
@@ -2082,6 +2126,11 @@ namespace To_do_list__1._1_
                                 if (GridBackground.Height - 36 <= CurrentL.Location.Y + 45 + CustomizePanel.VerticalScroll.Value)
                                 {
                                     GridBackground.Size = new Size(GridBackground.Width, GridBackground.Height + 47);
+                                    foreach (Control ctrl in CustomizePanel.Controls)
+                                    {
+                                        GridBackground.Size = new Size(GridBackground.Width, Math.Max(GridBackground.Height,ctrl.Location.Y + 45 + CustomizePanel.VerticalScroll.Value));
+
+                                    }
                                 }
 
                                 Found = true;
@@ -2094,12 +2143,12 @@ namespace To_do_list__1._1_
 
                 //remove space(cell) of the background that is useless
                 // but dont remove cells when the rows is less than 9
-              
+                /*
                 while (GridBackground.Height - 36 >= CurrentL.Location.Y + 45 + 45 + CustomizePanel.VerticalScroll.Value && GridBackground.Height > 423+47 )
                 {
                     GridBackground.Size = new Size(GridBackground.Width, GridBackground.Height - 47);
                 }
-               
+                */
                 if (Found == false)
                 {
                     DialogResult result = MessageBox.Show("Do you want delete it?", "Message", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -2140,6 +2189,11 @@ namespace To_do_list__1._1_
         {
             //resize and init GridCell
             int Rows = GridBackground.Height / 47;
+            foreach(Control ctrl in CustomizePanel.Controls)
+            {
+                Rows = Math.Max(Rows, ctrl.Location.Y / 47);
+            }
+
             int Columns = 3;
         
             GridCell = Preserve_resize_2Dpoint(GridCell,new Size(Rows,Columns));
@@ -2234,16 +2288,17 @@ namespace To_do_list__1._1_
             {
                 saved = true;
                 DialogResult result = MessageBox.Show("Do you want to save changes made?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
                 if (result == DialogResult.Yes)
                 {
+                    //set scroll value to 0
+                    CustomizePanel.AutoScrollPosition = new Point(0, 0);
+
                     //save 
                     StreamWriter file2 = new StreamWriter(CustomizePanel.Name);
                     foreach (Control ctrl in CustomizePanel.Controls)
                     {
                         if (ctrl is Label)
                         {
-
                             file2.WriteLine((ctrl as Label).Text);
                             file2.WriteLine((ctrl as Label).TabIndex);
                             file2.WriteLine((ctrl as Label).Size.Width);

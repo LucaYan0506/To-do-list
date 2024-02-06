@@ -10,3 +10,17 @@ D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To do lis
 D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To_do_list__1._1_.Detail_Form.resources
 D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To_do_list__1._1_.Form1.resources
 D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To_do_list__1._1_.Delete_form.resources
+D:\School\IT\C#\To do list\To do list (1.1)\To do list (1.1)\obj\Debug\To do list (1.1).csproj.SuggestedBindingRedirects.cache
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\bin\Debug\To do list (1.1).exe.config
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\bin\Debug\To do list (1.1).exe
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\bin\Debug\To do list (1.1).pdb
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To do list (1.1).csproj.AssemblyReference.cache
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To do list (1.1).csproj.SuggestedBindingRedirects.cache
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To_do_list__1._1_.Delete_form.resources
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To_do_list__1._1_.Detail_Form.resources
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To_do_list__1._1_.Form1.resources
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To_do_list__1._1_.Properties.Resources.resources
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To do list (1.1).csproj.GenerateResource.cache
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To do list (1.1).csproj.CoreCompileInputs.cache
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To do list (1.1).exe
+C:\Users\lucay\Desktop\To-do-list\To do list (1.1)\obj\Debug\To do list (1.1).pdb
